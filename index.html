@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vilakkumaram Leisure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Vilakkumaram Leisure</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Experience Nature Like Never Before</h1>
+            <p>Join us at Vilakkumaram Leisure for unforgettable moments.</p>
+            <a href="#events" class="btn">Explore Events</a>
+        </div>
+    </section>
+    
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Discover the beauty of Vilakkumaram Leisure, a perfect getaway near the lake.</p>
+    </section>
+    
+    <section id="events" class="section">
+        <h2>Upcoming Event</h2>
+        <p>Festival Night - Don't miss out on the fun!</p>
+        <div class="countdown" id="countdown"></div>
+    </section>
+    
+    <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="images/scene5.jpg" alt="Scenic View" onclick="openLightbox(this.src)">
+            <img src="images/scene9.jpg" alt="Party Night" onclick="openLightbox(this.src)">
+            <img src="images/scene7.jpg" alt="Lake View" onclick="openLightbox(this.src)">
+        </div>
+    </section>
+    
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+    </div>
+    
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: contact@vilakkumaram.com | Phone: +91 XXXXXXXXXX</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Vilakkumaram Leisure. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
