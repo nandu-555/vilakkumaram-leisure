@@ -1,33 +1,21 @@
-// Countdown Timer
-const countdownElement = document.getElementById('countdown');
-const eventDate = new Date("March 15, 2025 20:00:00").getTime();
-
-function updateCountdown() {
-    const now = new Date().getTime();
-    const timeLeft = eventDate - now;
-
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-    if (timeLeft < 0) {
-        clearInterval(timer);
-        countdownElement.innerHTML = "Event Started!";
-    }
-}
-
-const timer = setInterval(updateCountdown, 1000);
-updateCountdown();
-
-// Lightbox Feature
-function openLightbox(src) {
-    document.getElementById('lightbox').style.display = "flex";
-    document.getElementById('lightbox-img').src = src;
-}
-
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = "none";
-}
+"use strict";
+let text = document.getElementById('text');
+let bird1 = document.getElementById('bird1');
+let bird2 = document.getElementById('bird2');
+let btn = document.getElementById('btn');
+let rocks = document.getElementById('rocks');
+let forest = document.getElementById('forest');
+let water = document.getElementById('water');
+let header = document.getElementById('header');
+window.addEventListener('scroll', function () {
+    let value = window.scrollY;
+    text.style.top = 30 + value * -.1 + '%';
+    bird2.style.top = value * -1.5 + 'px';
+    bird2.style.left = value * 2 + 'px';
+    bird1.style.top = value * -1.5 + 'px';
+    bird1.style.left = value * -5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+    rocks.style.top = value * -.12 + 'px';
+    forest.style.top = value * .25 + 'px';
+    header.style.top = value * .5 + 'px';
+});
