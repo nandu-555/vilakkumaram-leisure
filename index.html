@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Vilakkumaram Leisure Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 <body>
@@ -42,9 +48,14 @@
     </div>
 
     <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>Discover the beauty of Vilakkumaram Leisure, a perfect getaway near the lake.</p>
-  </section>
+      <div class="about-box">
+        <h2>About Us</h2>
+        <p>Discover the beauty of Vilakkumaram Leisure, a perfect getaway near the lake.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+    </section>
+    
   
   <section id="events" class="section">
       <h2>Upcoming Event</h2>
@@ -58,6 +69,7 @@
           <img src="images/scene5.jpg" alt="Scenic View" onclick="openLightbox(this.src)">
           <img src="images/scene9.jpg" alt="Party Night" onclick="openLightbox(this.src)">
           <img src="images/scene7.jpg" alt="Lake View" onclick="openLightbox(this.src)">
+          <img src="images/scene1.jpg" alt="Lake View" onclick="openLightbox(this.src)">
       </div>
   </section>
   
@@ -65,10 +77,48 @@
       <img id="lightbox-img" src="">
   </div>
   
-  <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <p>Email: contact@vilakkumaram.com | Phone: +91 XXXXXXXXXX</p>
+  <section id="contact" class="section bg-gray-100 py-12">
+    <h2 class="text-4xl text-gray-800 mb-6 text-center font-bold">Contact Us</h2>
+  
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-4">
+      <!-- Contact Form -->
+      <div>
+        <form class="space-y-4">
+          <input type="text" placeholder="Your Name" class="form-field w-full p-3 border border-gray-300 rounded">
+          <input type="email" placeholder="Your Email" class="form-field w-full p-3 border border-gray-300 rounded">
+          <textarea placeholder="Your Message" rows="5" class="form-field w-full p-3 border border-gray-300 rounded"></textarea>
+          <button
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow"
+          >
+            Send
+          </button>
+        </form>
+        <p class="mt-6 text-gray-700">📧 Email: contact@vilakkumaram.com</p>
+        <p class="text-gray-700">📞 Phone: +91 XXXXXXXXXX</p>
+  
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-4">
+          <a href="https://www.instagram.com/vilakkumaramleisure/" target="_blank" class="text-pink-500 text-2xl hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" class="text-blue-600 text-2xl hover:scale-110 transition"><i class="fab fa-facebook"></i></a>
+          <a href="https://youtube.com" target="_blank" class="text-red-600 text-2xl hover:scale-110 transition"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+  
+      <!-- Google Map -->
+      <div class="w-full h-64 md:h-auto">
+        <iframe
+          class="w-full h-full rounded"
+          
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.6082616908684!2d76.3490102!3d9.7144358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b087d004f5d0e69%3A0x9a4162f57e82a969!2sVilakkumaram%20Leisure!5e0!3m2!1sen!2sin!4v1745176285883!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
   </section>
+  
 <!-- partial -->
   <script  src="./script.js"></script>
 

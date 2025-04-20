@@ -1,4 +1,7 @@
 /* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
 
 /* Global reset and base styles */
 * {
@@ -82,12 +85,14 @@
     z-index: 5;
     font-size: 60px;
     line-height: 1;
-    color: #2f2f2f;
+    color: #0c31a9;
+    font-family: 'Rancho', cursive;
   }
   
   #text span {
-    font-size: 30px;
-    color: #444;
+    font-size: 50px;
+    color: #1c8710;
+    font-family: 'Rancho', cursive;
   }
   
   #bird1, #bird2, #forest {
@@ -165,6 +170,33 @@
     font-size: 18px;
     max-width: 700px;
     margin: 0 auto;
+  }
+  
+  #about {
+    background-image: url('images/scene1.jpg'); /* Update this to your actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+  
+  .about-box {
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
   
   /* Gallery */
