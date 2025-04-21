@@ -15,6 +15,7 @@
   body {
     background: #f0f0f0;
     color: #333;
+    line-height: 1.6;
     overflow-x: hidden;
   }
   
@@ -23,12 +24,13 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 50px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.6);
+    flex-wrap: wrap;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(1px);
   }
   
@@ -38,12 +40,12 @@
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
   }
   
   .logo-img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%; /* Makes the logo circular */
     margin-right: 10px;
     object-fit: cover;
@@ -53,12 +55,14 @@
   
   #header ul {
     display: flex;
+    gap: 15px;
     list-style: none;
   }
   
   #header ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
     padding: 10px 20px;
     transition: 0.3s;
   }
@@ -68,6 +72,69 @@
     color: #333;
     border-radius: 5px;
   }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  header .logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  header ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+  }
+  
+  header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    header ul {
+      flex-direction: column;
+      background: white;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 150px;
+      padding: 10px;
+      display: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  
+    header ul.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
   
   /* Hero Section with Parallax */
   section {
@@ -252,4 +319,6 @@
     background: #222;
     color: #fff;
   }
+  
+
   

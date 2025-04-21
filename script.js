@@ -19,3 +19,4 @@ window.addEventListener('scroll', function () {
     forest.style.top = value * .25 + 'px';
     header.style.top = value * .5 + 'px';
 });
+
