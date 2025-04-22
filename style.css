@@ -321,4 +321,57 @@
   }
   
 
-  
+  /* style.css */
+
+/* Responsive logo image */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Navigation bar */
+header {
+  @apply flex items-center justify-between px-4 py-2 bg-white shadow-md fixed w-full z-50;
+}
+header .logo {
+  @apply flex items-center gap-2 font-bold text-xl text-blue-800;
+}
+header ul {
+  @apply hidden md:flex gap-4;
+}
+header ul.show {
+  @apply block absolute top-16 left-0 w-full bg-white p-4 md:hidden;
+}
+.menu-toggle {
+  @apply md:hidden text-2xl cursor-pointer;
+}
+
+/* Hero text */
+#text {
+  @apply text-3xl md:text-5xl text-center text-white font-bold mt-20 md:mt-40 px-4;
+}
+
+/* Gallery */
+.gallery-scroll-container {
+  @apply flex gap-4 overflow-x-auto px-4;
+}
+.gallery-image {
+  @apply w-64 h-40 object-cover rounded-lg shadow-md cursor-pointer;
+}
+
+/* Lightbox */
+.lightbox {
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center z-50 hidden;
+}
+.lightbox img {
+  @apply max-w-full max-h-full rounded-lg;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-text {
+    @apply px-4 text-center;
+  }
+}

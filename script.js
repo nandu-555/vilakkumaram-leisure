@@ -20,3 +20,9 @@ window.addEventListener('scroll', function () {
     header.style.top = value * .5 + 'px';
 });
 
+// script.js
+document.querySelector(".menu-toggle").addEventListener("click", () => {
+    const navList = document.querySelector("header ul");
+    navList.classList.toggle("show");
+  });
+  
