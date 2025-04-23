@@ -81,10 +81,10 @@
     cursor: pointer;
   }
   
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     header ul {
       flex-direction: column;
-      background: white;
+      background: rgb(0, 0, 0);
       position: absolute;
       top: 60px;
       right: 20px;
@@ -102,7 +102,7 @@
     .menu-toggle {
       display: block;
     }
-  }
+  } */
   
   
   /* Hero Section with Parallax */
