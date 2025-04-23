@@ -20,9 +20,57 @@ window.addEventListener('scroll', function () {
     header.style.top = value * .5 + 'px';
 });
 
-// script.js
-document.querySelector(".menu-toggle").addEventListener("click", () => {
-    const navList = document.querySelector("header ul");
-    navList.classList.toggle("show");
-  });
+// // script.js
+// document.querySelector(".menu-toggle").addEventListener("click", () => {
+//     const navList = document.querySelector("header ul");
+//     navList.classList.toggle("show");
+//   });
   
+  const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('nav ul');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+// Countdown Timer for Event
+const countdownElement = document.getElementById("countdown");
+const eventDate = new Date("2025-12-31T20:00:00");
+
+function updateCountdown() {
+  const now = new Date();
+  const timeLeft = eventDate - now;
+
+  if (timeLeft < 0) {
+    countdownElement.textContent = "Event is Live!";
+    return;
+  }
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+  const seconds = Math.floor((timeLeft / 1000) % 60);
+
+  countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Lightbox Logic
+function openLightbox(src) {
+  const lightbox = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  img.src = src;
+  lightbox.classList.add("show");
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  lightbox.classList.remove("show");
+}
+
+
+
+
+
