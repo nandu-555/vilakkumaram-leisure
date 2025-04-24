@@ -203,7 +203,7 @@
   }
   
   #about {
-    background-image: url('images/edited4.jpg'); /* Update this to your actual path */
+    background-image: url('images/ghibli2.png'); /* Update this to your actual path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -228,6 +228,8 @@
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   }
+  
+  
   
   /* Gallery */
   .gallery-scroll-container {
